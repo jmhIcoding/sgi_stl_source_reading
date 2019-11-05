@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\stl203\algo.h" />
+    <ClInclude Include="..\stl203\algobase.h" />
+    <ClInclude Include="..\stl203\alloc.h" />
+    <ClInclude Include="..\stl203\bvector.h" />
+    <ClInclude Include="..\stl203\defalloc.h" />
+    <ClInclude Include="..\stl203\deque.h" />
+    <ClInclude Include="..\stl203\function.h" />
+    <ClInclude Include="..\stl203\hash_map.h" />
+    <ClInclude Include="..\stl203\hash_set.h" />
+    <ClInclude Include="..\stl203\hashtable.h" />
+    <ClInclude Include="..\stl203\heap.h" />
+    <ClInclude Include="..\stl203\iterator.h" />
+    <ClInclude Include="..\stl203\list.h" />
+    <ClInclude Include="..\stl203\map.h" />
+    <ClInclude Include="..\stl203\multimap.h" />
+    <ClInclude Include="..\stl203\multiset.h" />
+    <ClInclude Include="..\stl203\pair.h" />
+    <ClInclude Include="..\stl203\pthread_alloc.h" />
+    <ClInclude Include="..\stl203\rope.h" />
+    <ClInclude Include="..\stl203\ropeimpl.h" />
+    <ClInclude Include="..\stl203\set.h" />
+    <ClInclude Include="..\stl203\slist.h" />
+    <ClInclude Include="..\stl203\stack.h" />
+    <ClInclude Include="..\stl203\stl_config.h" />
+    <ClInclude Include="..\stl203\tempbuf.h" />
+    <ClInclude Include="..\stl203\tree.h" />
+    <ClInclude Include="..\stl203\type_traits.h" />
+    <ClInclude Include="..\stl203\vector.h" />
+  </ItemGroup>
+</Project>
