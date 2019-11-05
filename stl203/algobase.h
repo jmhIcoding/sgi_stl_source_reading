@@ -11,10 +11,10 @@
  * representations about the suitability of this software for any
  * purpose.  It is provided "as is" without express or implied warranty.
  *
- *
+ *====>表示 这个文件是从HP的版本过来的
  * Copyright (c) 1996
  * Silicon Graphics Computer Systems, Inc.
- *
+ *====> SGI公司又附加了自己的版权
  * Permission to use, copy, modify, distribute and sell this software
  * and its documentation for any purpose is hereby granted without fee,
  * provided that the above copyright notice appear in all copies and
