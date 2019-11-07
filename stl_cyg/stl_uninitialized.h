@@ -39,7 +39,9 @@ template <class InputIterator, class ForwardIterator>
 inline ForwardIterator 
 __uninitialized_copy_aux(InputIterator first, InputIterator last,
                          ForwardIterator result,
-                         __true_type) {
+                         __true_type)
+//_true_type指 int,long long,char ...struct ?内置基础数据类型,plain old data
+{
   return copy(first, last, result);
 }
 
@@ -47,7 +49,10 @@ template <class InputIterator, class ForwardIterator>
 ForwardIterator 
 __uninitialized_copy_aux(InputIterator first, InputIterator last,
                          ForwardIterator result,
-                         __false_type) {
+                         __false_type) 
+//__false_type 是自定义的数据,里面有构造函数
+//把[first,last)的数据拷贝到以result开始的对象中
+{
   ForwardIterator cur = result;
   __STL_TRY {
     for ( ; first != last; ++first, ++cur)

@@ -40,4 +40,9 @@
     <ClInclude Include="..\stl203\type_traits.h" />
     <ClInclude Include="..\stl203\vector.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="源.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

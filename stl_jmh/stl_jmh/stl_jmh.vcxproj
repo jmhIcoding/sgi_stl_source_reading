@@ -10,42 +10,9 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\stl203\algo.h" />
-    <ClInclude Include="..\stl203\algobase.h" />
-    <ClInclude Include="..\stl203\alloc.h" />
-    <ClInclude Include="..\stl203\bvector.h" />
-    <ClInclude Include="..\stl203\defalloc.h" />
-    <ClInclude Include="..\stl203\deque.h" />
-    <ClInclude Include="..\stl203\function.h" />
-    <ClInclude Include="..\stl203\hashtable.h" />
-    <ClInclude Include="..\stl203\hash_map.h" />
-    <ClInclude Include="..\stl203\hash_set.h" />
-    <ClInclude Include="..\stl203\heap.h" />
-    <ClInclude Include="..\stl203\iterator.h" />
-    <ClInclude Include="..\stl203\list.h" />
-    <ClInclude Include="..\stl203\map.h" />
-    <ClInclude Include="..\stl203\multimap.h" />
-    <ClInclude Include="..\stl203\multiset.h" />
-    <ClInclude Include="..\stl203\pair.h" />
-    <ClInclude Include="..\stl203\pthread_alloc.h" />
-    <ClInclude Include="..\stl203\rope.h" />
-    <ClInclude Include="..\stl203\ropeimpl.h" />
-    <ClInclude Include="..\stl203\set.h" />
-    <ClInclude Include="..\stl203\slist.h" />
-    <ClInclude Include="..\stl203\stack.h" />
-    <ClInclude Include="..\stl203\stl_config.h" />
-    <ClInclude Include="..\stl203\tempbuf.h" />
-    <ClInclude Include="..\stl203\tree.h" />
-    <ClInclude Include="..\stl203\type_traits.h" />
-    <ClInclude Include="..\stl203\vector.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="源.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{FEC68A9B-93C8-4207-930A-97BC61D6FEF0}</ProjectGuid>
-    <RootNamespace>STLsourcecode</RootNamespace>
+    <ProjectGuid>{54800B50-2D4B-4E00-BB65-BC77466F7334}</ProjectGuid>
+    <RootNamespace>stl_jmh</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -71,14 +38,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>E:\TempWorkStation\sgi_stl_source_reading\stl203;$(IncludePath)</IncludePath>
-  </PropertyGroup>
+  <PropertyGroup />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>false</SDLCheck>
+      <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -98,6 +63,9 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\stl_alloc.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

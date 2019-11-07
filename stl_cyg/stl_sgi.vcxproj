@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4523059C-0E37-457F-B8E4-3EB36CA0100F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>E:\TempWorkStation\sgi_stl_source_reading\stl_cyg;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="source.cpp" />
+    <ClCompile Include="std\bastring.cc" />
+    <ClCompile Include="std\complext.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="algo.h" />
+    <ClInclude Include="algobase.h" />
+    <ClInclude Include="alloc.h" />
+    <ClInclude Include="builtinbuf.h" />
+    <ClInclude Include="bvector.h" />
+    <ClInclude Include="complex.h" />
+    <ClInclude Include="defalloc.h" />
+    <ClInclude Include="deque.h" />
+    <ClInclude Include="editbuf.h" />
+    <ClInclude Include="floatio.h" />
+    <ClInclude Include="fstream.h" />
+    <ClInclude Include="function.h" />
+    <ClInclude Include="hashtable.h" />
+    <ClInclude Include="hash_map.h" />
+    <ClInclude Include="hash_set.h" />
+    <ClInclude Include="heap.h" />
+    <ClInclude Include="indstream.h" />
+    <ClInclude Include="iolibio.h" />
+    <ClInclude Include="iomanip.h" />
+    <ClInclude Include="iostdio.h" />
+    <ClInclude Include="iostream.h" />
+    <ClInclude Include="iostreamP.h" />
+    <ClInclude Include="istream.h" />
+    <ClInclude Include="iterator.h" />
+    <ClInclude Include="libio.h" />
+    <ClInclude Include="libioP.h" />
+    <ClInclude Include="list.h" />
+    <ClInclude Include="map.h" />
+    <ClInclude Include="multimap.h" />
+    <ClInclude Include="multiset.h" />
+    <ClInclude Include="ostream.h" />
+    <ClInclude Include="pair.h" />
+    <ClInclude Include="parsestream.h" />
+    <ClInclude Include="pfstream.h" />
+    <ClInclude Include="PlotFile.h" />
+    <ClInclude Include="procbuf.h" />
+    <ClInclude Include="pthread_alloc.h" />
+    <ClInclude Include="rope.h" />
+    <ClInclude Include="ropeimpl.h" />
+    <ClInclude Include="set.h" />
+    <ClInclude Include="SFile.h" />
+    <ClInclude Include="slist.h" />
+    <ClInclude Include="stack.h" />
+    <ClInclude Include="stdiostream.h" />
+    <ClInclude Include="std\bastring.h" />
+    <ClInclude Include="std\complext.h" />
+    <ClInclude Include="std\dcomplex.h" />
+    <ClInclude Include="std\fcomplex.h" />
+    <ClInclude Include="std\ldcomplex.h" />
+    <ClInclude Include="std\straits.h" />
+    <ClInclude Include="stl.h" />
+    <ClInclude Include="stl_algo.h" />
+    <ClInclude Include="stl_algobase.h" />
+    <ClInclude Include="stl_alloc.h" />
+    <ClInclude Include="stl_bvector.h" />
+    <ClInclude Include="stl_config.h" />
+    <ClInclude Include="stl_construct.h" />
+    <ClInclude Include="stl_deque.h" />
+    <ClInclude Include="stl_function.h" />
+    <ClInclude Include="stl_hashtable.h" />
+    <ClInclude Include="stl_hash_fun.h" />
+    <ClInclude Include="stl_hash_map.h" />
+    <ClInclude Include="stl_hash_set.h" />
+    <ClInclude Include="stl_heap.h" />
+    <ClInclude Include="stl_iterator.h" />
+    <ClInclude Include="stl_list.h" />
+    <ClInclude Include="stl_map.h" />
+    <ClInclude Include="stl_multimap.h" />
+    <ClInclude Include="stl_multiset.h" />
+    <ClInclude Include="stl_numeric.h" />
+    <ClInclude Include="stl_pair.h" />
+    <ClInclude Include="stl_queue.h" />
+    <ClInclude Include="stl_raw_storage_iter.h" />
+    <ClInclude Include="stl_relops.h" />
+    <ClInclude Include="stl_rope.h" />
+    <ClInclude Include="stl_set.h" />
+    <ClInclude Include="stl_slist.h" />
+    <ClInclude Include="stl_stack.h" />
+    <ClInclude Include="stl_tempbuf.h" />
+    <ClInclude Include="stl_tree.h" />
+    <ClInclude Include="stl_uninitialized.h" />
+    <ClInclude Include="stl_vector.h" />
+    <ClInclude Include="stream.h" />
+    <ClInclude Include="streambuf.h" />
+    <ClInclude Include="strfile.h" />
+    <ClInclude Include="strstream.h" />
+    <ClInclude Include="tempbuf.h" />
+    <ClInclude Include="tree.h" />
+    <ClInclude Include="type_traits.h" />
+    <ClInclude Include="vector.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

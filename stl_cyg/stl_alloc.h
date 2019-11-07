@@ -85,7 +85,7 @@
         EnterCriticalSection(&__node_allocator_lock)
 #   define __NODE_ALLOCATOR_UNLOCK \
         LeaveCriticalSection(&__node_allocator_lock)
-#   define __NODE_ALLOCATOR_THREADS true
+#   define __NODE_ALLOCATOR_THREADS false
 #   define __VOLATILE volatile  // may not be needed
 # endif /* WIN32THREADS */
 # ifdef __STL_SGI_THREADS
@@ -132,7 +132,8 @@ __STL_BEGIN_NAMESPACE
 #endif
 
 template <int inst>
-class __malloc_alloc_template {
+class __malloc_alloc_template //直接从系统中分配内存,大块的内存块
+{
 
 private:
 
@@ -293,6 +294,8 @@ typedef malloc_alloc single_client_alloc;
 //    information that we can return the object to the proper free list
 //    without permanently losing part of the object.
 //
+// 当大于_MAX_BYTES的时候,从内存直接分配
+// 其他情况ROUND_UP分配
 
 // The first template parameter specifies whether more than one thread
 // may use this allocator.  It is safe to allocate an object from
@@ -305,9 +308,9 @@ typedef malloc_alloc single_client_alloc;
 // different types, limiting the utility of this approach.
 #ifdef __SUNPRO_CC
 // breaks if we make these template class members:
-  enum {__ALIGN = 8};
-  enum {__MAX_BYTES = 128};
-  enum {__NFREELISTS = __MAX_BYTES/__ALIGN};
+  enum {__ALIGN = 8};//对齐的baseline
+  enum {__MAX_BYTES = 128};//最大的区块
+  enum {__NFREELISTS = __MAX_BYTES/__ALIGN};//链表的条数
 #endif
 
 template <bool threads, int inst>
@@ -322,7 +325,7 @@ private:
     enum {__NFREELISTS = __MAX_BYTES/__ALIGN};
 # endif
   static size_t ROUND_UP(size_t bytes) {
-        return (((bytes) + __ALIGN-1) & ~(__ALIGN - 1));
+        return (((bytes) + __ALIGN-1) & ~(__ALIGN - 1));//先+7,然后最后3位填充0
   }
 __PRIVATE:
   union obj {
