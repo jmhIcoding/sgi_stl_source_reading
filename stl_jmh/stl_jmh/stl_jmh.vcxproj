@@ -38,7 +38,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Users\jmh081701\Documents\sgi_stl_source_reading\stl_jmh\stl_jmh;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -65,6 +67,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\stl_alloc.h" />
+    <ClInclude Include="src\stl_config.h" />
+    <ClInclude Include="src\stl_iterator.h" />
+    <ClInclude Include="src\type_traits.h" />
+    <ClInclude Include="stl_test\stl_alloc_test.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stl_test\Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

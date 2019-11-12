@@ -18,5 +18,22 @@
     <ClInclude Include="src\stl_alloc.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="stl_test\stl_alloc_test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stl_config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stl_iterator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type_traits.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stl_test\Source.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
